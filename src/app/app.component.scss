@@ -1,0 +1,36 @@
+$toolbar-height: 9vh;
+$sidebar-width: 280px;
+
+::ng-deep body {
+  margin: 0;
+}
+
+::ng-deep .mat-sidenav-container {
+  height: calc(100vh - #{$toolbar-height}) !important;
+}
+
+mat-sidenav {
+  width: $sidebar-width;
+  padding: 15px;
+}
+
+.mat-drawer {
+    padding-top: 35px;
+}
+
+.main-content {
+  padding-top: 0;
+  padding: 20px;
+}
+
+.mat-toolbar {
+  height: $toolbar-height;
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.dasbor {
+    width: calc(#{$sidebar-width} - 54px);
+}
