@@ -1,4 +1,4 @@
-$toolbar-height: 9vh;
+$toolbar-height: 10vh;
 $sidebar-width: 280px;
 
 ::ng-deep body {
@@ -12,10 +12,6 @@ $sidebar-width: 280px;
 mat-sidenav {
   width: $sidebar-width;
   padding: 15px;
-}
-
-.mat-drawer {
-    padding-top: 35px;
 }
 
 .main-content {

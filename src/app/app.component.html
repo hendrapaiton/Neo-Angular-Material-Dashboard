@@ -1,32 +1,65 @@
 <div class="container" fxLayout fxLayoutGap="10px">
-  <mat-toolbar color="primary">
-    <h1 class="dasbor">My Application</h1>
-    <button mat-icon-button (click)="sidenav.toggle()">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span class="toolbar-spacer"></span>
-    My Account
-  </mat-toolbar>
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <h1 class="dasbor">My Application</h1>
+            <button (click)="sidenav.toggle()" mat-icon-button>
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span class="toolbar-spacer"></span>
+            <div>
+                <button mat-icon-button type="button">
+                    <mat-icon>account_box</mat-icon>
+                </button>
+                <button mat-icon-button type="button">
+                    <mat-icon>build</mat-icon>
+                </button>
+                <button color="warn" mat-raised-button style="margin-left: 20px" type="button">
+                    Keluar &nbsp;
+                    <mat-icon>exit_to_app</mat-icon>
+                </button>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
 </div>
 <div class="container" fxLayout fxLayoutGap="10px">
-  <mat-sidenav-container>
-    <mat-sidenav mode="side" #sidenav opened position="start">
-      left panel
-    </mat-sidenav>
-    <mat-sidenav-content>
-      <div class="main-content">
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-          industry's
-          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to
-          make
-          a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-          containing
-          Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-          versions
-          of Lorem Ipsum.</p>
-      </div>
-      <router-outlet></router-outlet>
-    </mat-sidenav-content>
-  </mat-sidenav-container>
+    <mat-sidenav-container>
+        <mat-sidenav #sidenav mode="side" opened position="start">
+            <mat-nav-list>
+                <a [routerLink]="'/'" mat-list-item>Satu</a>
+                <a [routerLink]="'/'" mat-list-item>Dua</a>
+                <a [routerLink]="'/'" mat-list-item>Tiga</a>
+                <a [routerLink]="'/'" mat-list-item>Empat</a>
+                <a [routerLink]="'/'" mat-list-item>Lima</a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <mat-sidenav-content>
+            <div class="main-content">
+                <mat-card>
+                    <mat-card-content>
+                        <mat-card-title>Konten</mat-card-title>
+                        <mat-card-subtitle>Isi dari aplikasi</mat-card-subtitle>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the
+                            industry's
+                            standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                            scrambled it to
+                            make
+                            a type specimen book. It has survived not only five centuries, but also the leap into
+                            electronic
+                            typesetting,
+                            remaining essentially unchanged. It was popularised in the 1960s with the release of
+                            Letraset sheets
+                            containing
+                            Lorem Ipsum passages, and more recently with desktop publishing software like Aldus
+                            PageMaker
+                            including
+                            versions
+                            of Lorem Ipsum.
+                        </p>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
 </div>
